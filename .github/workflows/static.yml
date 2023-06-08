@@ -43,5 +43,5 @@ jobs:
         uses: actions/deploy-pages@v2
       - name: Print deployment information
         run: |
-          echo "Deployment ID: ${{ job.steps.deployment.outputs.id }}"
-          echo "Deployment URL: ${{ job.env.url }}"
+          echo "Deployment ID: ${{ steps.deployment.outputs.id }}"
+          echo "Deployment URL: ${{ steps.deployment.outputs.page_url }}"
